@@ -8,11 +8,10 @@ const webpack  = require('webpack');
 module.exports = {
     entry: "./dev/js/main.js",
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: "[name].[contenthash].js",
         clean: true
     },
-    mode: "production",
     module: {
         rules: [
             {
