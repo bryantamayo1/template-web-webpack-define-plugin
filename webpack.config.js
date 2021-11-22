@@ -6,21 +6,26 @@ const webpack  = require('webpack');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-    entry: "./src/main.js",
+    entry: "./dev/js/main.js",
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: "[name].[contenthash].js",
         clean: true
     },
+    mode: "production",
     module: {
         rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: "babel-loader"
+            },
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             }
         ]
     },
-    mode: "production",
     optimization: {
         minimizer: [
             new CssMinimizerPlugin({
@@ -38,7 +43,7 @@ module.exports = {
     plugins:[
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './dev/index.html'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
