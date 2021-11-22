@@ -1,5 +1,6 @@
 import '../styles/normalize.css';
 import '../styles/main.css';
+import background from '../assets/img/background-main.jpg';
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log(URL);
@@ -18,4 +19,11 @@ const init = async() => {
         divContainer.classList.add('containerName');
         container[0].appendChild(divContainer);
     }
+
+    let imgContainer = document.getElementsByClassName("imgContainer");
+    const img = new Image();
+    img.src = background;
+    img.alt = "background";
+    imgContainer[0].appendChild(img);
+
 }

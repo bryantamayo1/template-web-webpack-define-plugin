@@ -1,6 +1,6 @@
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #21D4FD;
     background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 }
@@ -28,4 +28,8 @@
     to{
         left: 0px;
     }
+}
+.imgContainer img{
+    width: 500px;
+    height: 500px;
 }
