@@ -2,10 +2,13 @@ import '../index.html';
 import '../styles/normalize.css';
 import '../styles/main.css';
 import background from '../assets/img/background-main.jpg';
+import { sumar } from './utils';
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log(URL);
     init();
+    const resultado = sumar(5, 2);
+    console.log({resultado});
 });
 
 const init = async() => {
