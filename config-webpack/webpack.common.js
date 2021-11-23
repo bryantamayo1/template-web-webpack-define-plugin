@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const webpack  = require('webpack');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -20,6 +18,7 @@ module.exports = {
             },
             {
                 test: /\.m?js$/,
+                include: path.resolve(__dirname, '../dev/js'),
                 exclude: /node_modules/,
                 use: "babel-loader"
             },
@@ -30,21 +29,11 @@ module.exports = {
             {
                 type: "asset/resource",
                 test: /\.(jpg|jpeg|png|gif|svg|ico)$/i
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+                type: 'asset/inline',
             }
-        ]
-    },
-    optimization: {
-        minimizer: [
-            new CssMinimizerPlugin({
-                minimizerOptions: {
-                    preset: [
-                        "default",
-                        {
-                            discardComments: {removeAll: true}
-                        }
-                    ]
-                }
-            })
         ]
     },
     plugins:[
@@ -54,9 +43,6 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
-        }),
-        new webpack.DefinePlugin({
-            'URL': JSON.stringify('http://my-web')
         })
     ]
 }
