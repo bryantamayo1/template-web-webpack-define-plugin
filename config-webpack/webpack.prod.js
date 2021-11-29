@@ -2,11 +2,20 @@ const { merge } = require("webpack-merge")
 const common = require('./webpack.common');
 const webpack  = require('webpack');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 
 /** @type {import('webpack').Configuration} */
 const prod = {
     mode: 'production',
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+        },
+        ]
+    },
     // devtool: 'source-map' // It's recommended
     optimization: {
         minimize: true,
@@ -40,6 +49,9 @@ const prod = {
     plugins:[
         new webpack.DefinePlugin({
             'URL': JSON.stringify('http://my-web-prod')
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css'
         })
     ]
 }

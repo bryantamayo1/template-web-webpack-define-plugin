@@ -5,6 +5,14 @@ const webpack  = require('webpack');
 /** @type {import('webpack').Configuration} */
 const dev = {
     mode: 'development',
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader', 'postcss-loader']
+      },
+      ]
+    },
     devServer: {
         compress: true,
         port: 3010
