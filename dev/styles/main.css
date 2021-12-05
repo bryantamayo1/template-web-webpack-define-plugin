@@ -8,6 +8,7 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .links-header{
     margin: 0px;
@@ -63,7 +64,6 @@ html{
 .container-input{
     position: relative;
     text-align: center;
-    border: 1px solid red;
     width: 580px;
     margin: 0 auto;
 }
@@ -85,7 +85,7 @@ html{
 }
 .input-search input{
     border-radius: 50px;
-    /* border: none; */
+    border: none; 
     height: 40px;
     width: 100%;
     padding: 0px 15px;
@@ -213,10 +213,10 @@ html{
         width: 400px;
     }
     .container-logo-google img{
-        width: 490px;
+        width: 470px;
     }
     .container-buttons-search div{
-        width: 490px;
+        width: 470px;
     }
 }
 @media only screen and (max-width: 480px){
@@ -229,12 +229,22 @@ html{
     .container-buttons-search div{
         width: 320px;
     }
-}
-@media only screen and (max-width: 480px){
     .container-buttons-search div{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         row-gap: 10px;
+    }
+    .links-header.links-flex{
+        display: inline-block;
+    }
+    .header{
+        flex-wrap: nowrap;
+    }
+    .header-right{
+        display: flex;
+    }
+    .links-header.links-flex-right{
+        text-align: right;
     }
 }
