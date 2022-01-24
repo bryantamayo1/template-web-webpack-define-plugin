@@ -43,7 +43,7 @@ const prod = {
             name: 'runtime',
         },
         // splitChunks: {
-        //     chunks: "all"       // Se genera los .map correspondientes, se aconseja no subirlos a pord
+        //     chunks: "all"       // Se genera los .map correspondientes, se aconseja no subirlos a prod
         // }
     },
     plugins:[
