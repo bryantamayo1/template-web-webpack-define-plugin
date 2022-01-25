@@ -42,6 +42,9 @@ const prod = {
         // runtimeChunk: {
         //     name: 'runtime',
         // },
+        runtimeChunk: {
+            name: entrypoint => `runtimechunk~${entrypoint.name}`
+         },
         // splitChunks: {
         //     chunks: "all"       // Se genera los .map correspondientes, se aconseja no subirlos a prod
         // }
