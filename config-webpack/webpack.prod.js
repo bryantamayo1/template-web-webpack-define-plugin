@@ -39,9 +39,9 @@ const prod = {
                 extractComments: false,
               }),
         ],
-        runtimeChunk: {
-            name: 'runtime',
-        },
+        // runtimeChunk: {
+        //     name: 'runtime',
+        // },
         // splitChunks: {
         //     chunks: "all"       // Se genera los .map correspondientes, se aconseja no subirlos a prod
         // }
