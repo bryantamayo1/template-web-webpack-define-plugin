@@ -38,6 +38,7 @@
     │   │    └── normalize.css              # css to normalize the styles of web page
     │   ├──  index.html                     # html file root
     ├── babel.config.json                   # setup of library babel
+    ├── LICENSE                             # License MIT
     ├── manifest.json                       # info about the web page
     ├── package.json.json                   # file setup of profect
     ├── postcss.config.js                   # setup of library postcss
@@ -50,4 +51,4 @@ Each six months it tries to update all project with npm-check-updates library.
 - Webpack [browserlist](https://github.com/browserslist/browserslist#browsers-data-updating): 
 
 https://github.com/browserslist/browserslist#browsers-data-updating
-- Global variables with webpack.DefinePlugin
+- Global variables with 
