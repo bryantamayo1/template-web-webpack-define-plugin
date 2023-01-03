@@ -48,6 +48,6 @@
 Each six months it tries to update all project with npm-check-updates library.
 ## Others
 - Webpack [browserlist](https://github.com/browserslist/browserslist#browsers-data-updating): 
-<br>
+
 https://github.com/browserslist/browserslist#browsers-data-updating
 - Global variables with webpack.DefinePlugin
