@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-    entry: "./dev/js/main.js",
+    entry: "./src/js/main.js",
     output: {
         path: path.resolve(__dirname, '../build'),
         filename: "[name].[contenthash].js",
@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 test: /\.m?js$/,
-                include: path.resolve(__dirname, '../dev/js'),
+                include: path.resolve(__dirname, '../src/js'),
                 exclude: /node_modules/,
                 use: "babel-loader"
             },
@@ -40,7 +40,7 @@ module.exports = {
     plugins:[
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './dev/index.html'
+            template: './src/index.html'
         }),
 
     ]
