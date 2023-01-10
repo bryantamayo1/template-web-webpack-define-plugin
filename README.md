@@ -27,7 +27,7 @@
     ├── config-webpack                      # setup of webpack
     │   ├──  webpack.common.js              # common setup for dev and prod
     │   ├──  webpack.dev.js                 # setup only for dev
-    │   ├──  webpack.prod.js                # setup only for prod
+    │   └──  webpack.prod.js                # setup only for prod
     ├── docs                                # screenshots of updatings
     ├── node_modules                        # libraries after of installing with npm install
     ├── src                                 # code for development
@@ -36,7 +36,7 @@
     │   ├──  styles                         # only files css
     │   │    └── main.css                   # css
     │   │    └── normalize.css              # css to normalize the styles of web page
-    │   ├──  index.html                     # html file root
+    │   └──  index.html                     # html file root
     ├── babel.config.json                   # setup of library babel
     ├── LICENSE                             # License MIT
     ├── manifest.json                       # info about the web page
