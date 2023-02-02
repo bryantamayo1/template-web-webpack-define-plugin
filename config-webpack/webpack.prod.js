@@ -57,11 +57,12 @@ const prod = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
+        // Copy all files of files-to-build folder inside build folder
         new CopyPlugin ({
             patterns: [
-                { from: 'manifest.json', to: './' }
+                { from: './files-to-build', to: './' }
             ]
-        })
+        }),
     ]
 }
 

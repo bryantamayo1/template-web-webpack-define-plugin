@@ -1,11 +1,15 @@
-# Webpack-babel-configuration-3
->Final version template of webpack to build a web page.
+# template-web-webpack.DefinePlugin
+>Final version template of webpack to build a web page
 
 ## Table of contents
-1. [Installation](#installation)
-2. [Structure of project](#structure-of-project)
-3. [Updates](#updates)
-3. [Others](#others)
+1. [About](#about)
+2. [Installation](#installation)
+3. [Structure of project](#structure-of-project)
+4. [Updates](#updates)
+5. [Others](#others)
+
+## About
+Template to create web page with Webpack's environment and webpack.DefinePlugin library to global variables.
 
 ## Installation
 1. Install libraries
@@ -29,6 +33,7 @@
     │   ├──  webpack.dev.js                 # setup only for dev
     │   └──  webpack.prod.js                # setup only for prod
     ├── docs                                # screenshots of updatings
+    ├── files-to-build                      # files to copy in build folder
     ├── node_modules                        # libraries after of installing with npm install
     ├── src                                 # code for development
     │   ├──  js                             # only files javascript
