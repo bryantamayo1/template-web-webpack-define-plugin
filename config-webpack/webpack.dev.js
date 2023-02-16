@@ -15,6 +15,9 @@ const dev = {
     },
     devServer: {
         compress: true,
+        static: {
+          directory: path.join(__dirname, '../src'),
+        },
         port: 3010
       },
     // target: "web", // Ignora browserslist de package.json
