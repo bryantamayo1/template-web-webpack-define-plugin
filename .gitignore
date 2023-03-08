@@ -1,6 +1,14 @@
-### Dependency directories ###
-node_modules/
+# Visual Studio Code
+.vscode/
+
+# Global variables
+.env*
+
+# Production
 build/
 
-### VisualStudioCode ###
-.vscode/*
+# Dependencies
+node_modules/
+
+# Ignore Mac system files 
+.DS_store
