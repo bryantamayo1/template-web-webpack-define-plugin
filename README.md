@@ -40,12 +40,11 @@ Template to create web page with Webpack's environment and webpack.DefinePlugin 
     │   ├──  js                             # only files javascript
     │   │    └── main.js                    # javascript file root
     │   ├──  styles                         # only files css
-    │   │    └── main.css                   # css
+    │   │    ├── main.css                   # css
     │   │    └── normalize.css              # css to normalize the styles of web page
     │   └──  index.html                     # html file root
     ├── babel.config.json                   # setup of library babel
     ├── LICENSE                             # License MIT
-    ├── manifest.json                       # info about the web page
     ├── package.json.json                   # file setup of profect
     ├── postcss.config.js                   # setup of library postcss
     └── README.md                           # info of project
